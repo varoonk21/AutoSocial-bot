@@ -1,0 +1,22 @@
+{
+  "name": "AutoSocial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -n back,front -c blue,green \"pnpm --filter ./backend dev\" \"pnpm --filter ./frontend dev\"",
+    "dev:backend": "pnpm --filter ./backend dev",
+    "dev:frontend": "pnpm --filter ./frontend dev",
+    "start": "pnpm --filter ./frontend build && pnpm --filter ./backend build && pnpm --filter ./backend start",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.34.6",
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "oxfmt": "^0.66.0"
+  }
+}
